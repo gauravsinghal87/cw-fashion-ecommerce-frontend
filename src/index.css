@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-border; }
+  html { scrollbar-gutter: stable; }
+  body { @apply bg-background text-primary font-sans antialiased overflow-x-hidden; }
+  h1, h2, h3, h4 { @apply font-display; }
+  ::selection { @apply bg-accent/20; }
+}
+
+@layer components {
+  .container-luxe { @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+  .btn-primary { @apply bg-primary text-secondary px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-medium tracking-wider uppercase transition-all duration-200 hover:bg-primary/90 active:scale-[0.98]; }
+  .btn-outline { @apply border border-primary text-primary px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-medium tracking-wider uppercase transition-all duration-200 hover:bg-primary hover:text-secondary active:scale-[0.98]; }
+  .btn-accent { @apply bg-accent text-primary px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-medium tracking-wider uppercase transition-all duration-200 hover:bg-accent/90 active:scale-[0.98]; }
+  .input-luxe { @apply w-full px-4 py-3 border border-border bg-white text-sm focus:outline-none focus:border-primary transition-colors duration-200 placeholder:text-gray-400; }
+  .card-luxe { @apply bg-card border border-border; }
+  .section-title { @apply text-xl sm:text-2xl md:text-3xl font-display font-semibold tracking-tight; }
+  .divider { @apply w-12 h-0.5 bg-accent my-4; }
+}
+
+@layer utilities {
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .text-balance { text-wrap: balance; }
+}
+
+.skeleton { @apply bg-gray-200 animate-pulse rounded; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
