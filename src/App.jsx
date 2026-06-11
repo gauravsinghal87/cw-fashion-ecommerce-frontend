@@ -14,7 +14,7 @@ import VendorForgotPassword from './pages/vendor/VendorForgotPassword';
 
 function App() {
   return (
-    <GoogleOAuthProvider clientId={"504641950387-22jfhmu4d767n7i091nsk09dud5hj52r.apps.googleusercontent.com"}>
+    <GoogleOAuthProvider clientId={"430153126304-hl5gu3ptnbcuet8t733jj948gg8sl7ep.apps.googleusercontent.com"}>
       <SiteProvider>
         <ScrollToTop />
         <Suspense fallback={<Loading />}>
