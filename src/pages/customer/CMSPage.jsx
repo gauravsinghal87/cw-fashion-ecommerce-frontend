@@ -98,17 +98,12 @@ const CMSPage = () => {
           fallback?.title ||
           page?.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}
       </h1>
-      <div className="prose prose-sm sm:prose-base max-w-none text-gray-600 leading-relaxed">
-        {content?.content ? (
-          content.content.split("\n").map((p, i) => (
-            <p key={i} className="mb-4">
-              {p}
-            </p>
-          ))
-        ) : (
-          <p>{fallback?.content || "Content coming soon."}</p>
-        )}
-      </div>
+      <div
+        className="prose prose-sm sm:prose-base max-w-none text-gray-600 leading-relaxed"
+        dangerouslySetInnerHTML={{
+          __html: content?.content || fallback?.content || "Content coming soon.",
+        }}
+      />
     </div>
   );
 };
