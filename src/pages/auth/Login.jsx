@@ -110,9 +110,9 @@ const Login = () => {
             <p className="text-sm text-gray-500">Don't have an account? <Link to="/register" className="text-primary font-medium hover:underline">Create one</Link></p>
           </div>
 
-          <div className="mt-6 pt-6 border-t border-border">
+          {/* <div className="mt-6 pt-6 border-t border-border">
             <p className="text-xs text-gray-400 text-center">Demo: admin@luxefashion.com / Admin@1234</p>
-          </div>
+          </div> */}
         </div>
       </motion.div>
     </div>
