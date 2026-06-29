@@ -10,7 +10,7 @@ export const SiteProvider = ({ children }) => {
   const fetchSettings = useCallback(() => {
     get(API.FOOTER.GET).then(({ data }) => {
       if (data.settings) setSettings(data.settings);
-    }).catch(() => {});
+    }).catch(() => { });
   }, []);
 
   useEffect(() => { fetchSettings(); }, [fetchSettings]);

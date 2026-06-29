@@ -23,9 +23,9 @@ const Footer = () => {
                 className="h-8 sm:h-10 w-auto max-w-full object-contain mb-3 sm:mb-4"
               />
             )}
-            <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold mb-3 sm:mb-4 break-words">
-              {title}
-            </h3></div>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold mb-3 sm:mb-4 break-words">
+                {title}
+              </h3></div>
             <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
               Premium multi-vendor fashion marketplace. Discover the latest
               trends from top brands and independent designers.
