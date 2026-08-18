@@ -17,6 +17,7 @@ const VendorRegister = () => {
     storeName: "",
     panNumber: "",
     aadhaarNumber: "",
+    bankName: "",
     bankAccount: "",
     ifscCode: "",
     upiId: "",
@@ -264,6 +265,13 @@ const VendorRegister = () => {
 
           {step === 3 && (
             <form onSubmit={handleSubmit} className="space-y-5">
+              <Input
+                label="Bank Name *"
+                value={form.bankName}
+                onChange={(e) => setForm({ ...form, bankName: e.target.value })}
+                placeholder="Your bank name (e.g. HDFC Bank)"
+                required
+              />
               <Input
                 label="Bank Account Number *"
                 value={form.bankAccount}
